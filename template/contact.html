@@ -1,0 +1,181 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+    <title>Food&Drinks</title>
+</head>
+<body>
+    <header >
+        <nav>
+            <div class="open">
+                <i class="fas fa-bars"></i>
+            </div>
+           
+            <div class="logo">
+              <a href="/"><img src="{% static 'images/logo.jpg' %}" alt="logo"></a>  
+            </div>
+            <ul class="navigation-list">
+                <div class="close"><i class="fas fa-times"></i></div>
+                <li><a href="menu" class="nav-link"><i class="fas fa-hamburger"></i> <span>MENU</span></a></li>
+                <li><a href="about-us" class="nav-link"><i class="fas fa-tag"></i> <span>ABOUT US</span></a></li>
+                <li><a href="contact" class="nav-link"><i class="far fa-address-book"></i> <span>CONTACT</span></a></li>
+            </ul>
+           
+        </nav>
+    </header>
+    <section class="form-section">
+        <div class="contact-header">
+            <h1>CONTACTS</h1>
+            <img src="{% static 'images/contact.jpg' %}" alt="">
+        </div>
+        <div class="form-container">
+            <div class="form-row">
+                <h2>Get in touch</h2>
+            <form action="/contact" method="post" id="form">
+                {% csrf_token%}
+                <div class="form-group">
+                <div class="input-grp">
+                    <label for="firstname">FIRST NAME</label>
+                <input type="text" class="firtsname" placeholder="Your First Name" name="firstname" >
+                <div id="error">
+            
+                    {% for err in form.firstname.errors %}
+                    {{err}}
+                    {% endfor %}
+                 
+                </div>
+                </div>
+                <div class="input-grp">
+                    <label for="lastname">LAST NAME</label>
+                    <input class="lastname" type="text" placeholder="Your Last Name" name="lastname" >
+                    <div id="error">
+                 
+                        {% for err in form.lastname.errors %}
+                        {{err}}
+                        {% endfor %}
+                 
+                    </div>
+                </div>
+                </div>
+                <div class="message-grp">
+                    <label class="label-txt" for="textarea">YOUR MESSAGE</label>
+                    <textarea name="message" class="message" placeholder="Write your message here" ></textarea>
+                    <div id="error">
+                    
+                        {% for err in form.message.errors %}
+                        {{err}}
+                        {% endfor %}
+                       
+                    </div>
+                </div>
+           
+               <div class="form-group">
+                   <div class="input-grp"> 
+                       <label for="email">E-MAIL</label>
+                    <input type="email" class="email" placeholder="Your email" name="email">
+                    <div id="error">
+             
+                        {% for err in form.email.errors %}
+                        {{err}}
+                        {% endfor %}
+                        
+                    </div> 
+                </div>
+             
+                <input class='contact-submit' type="submit" value="SEND MESSAGE" name="submit">
+               </div>
+            
+            </form>
+    
+            </div>
+            <div class="socials-row">
+                <div class="social-column">
+                    <h3>
+                        FOLLOW US
+                    </h3>
+                    <div class="small-line"></div>
+                    <div class="icons">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram-square"></i>
+                    </div>
+                </div>
+                <div class="social-column">
+                    <h3>
+                        PHONE
+                    </h3>
+                    <div class="small-line"></div>
+                    <div class="small-container">
+                        <i class="fas fa-phone-square"></i>
+                        <p>+1-202-555-0118</p>
+                    </div>
+                  
+                </div>
+                <div class="social-column">
+                    <h3>ADDRESS</h3>
+                    <div class="small-line"></div>
+                    <div class="small-container">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>18014 2510 Renwick Drive, Pennsylvania PA </p>
+                    </div>
+                
+                </div>
+                <div class="social-column">
+                    <h3>OPENING HOURS</h3>
+                    <div class="small-line"></div>
+                    <div class="small-container">
+                        <i class="fas fa-clock"></i> 
+                        <p>09:00am-07:00pm</p>
+                    </div>
+                   
+                </div>
+            </div>
+         
+        </div>
+    </section>
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-sec">
+                <div class="logo-footer">
+                    <img src="{% static 'images/logo.jpg' %}" alt="Logo">
+                </div>
+                <p>Address: 18014 2510 Renwick Drive, Pennsylvania PA</p>
+                <p>Email: <a href="mailto:anastasiu.tudor@gmail.com">  food&drinks@gmail.com </a> </p>
+            </div>
+            <div class="line"></div>
+            <div class="footer-sec">
+               <h2>Our Menu</h2>
+               <p>PIZZAS / BURGERS / TOASTS</p>
+               <p>SALADS / DRINKS / DESSERTS</p>
+            </div>
+            <div class="line"></div>
+            <div class="footer-sec">
+                <h2>NEWSLETTER</h2>
+                <form action="/contact" method="POST">
+                    {% csrf_token %}
+                    <input class="search-input" type="email" placeholder="Your email" name="subscription">
+                    <input class="submit" type="submit" value="SUBSCRIBE">
+                </form>
+             
+                
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="{% static 'js/validation.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

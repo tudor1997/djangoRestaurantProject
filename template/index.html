@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+    <title>Food&Drinks</title>
+</head>
+<body>
+    <header >
+        <nav>
+            <div class="open">
+                <i class="fas fa-bars"></i>
+            </div>
+           
+            <div class="logo">
+              <a href="/"><img src="{% static 'images/logo.jpg' %}" alt="logo"></a>  
+            </div>
+            <ul class="navigation-list">
+                <div class="close"><i class="fas fa-times"></i></div>
+                <li><a href="menu" class="nav-link"><i class="fas fa-hamburger"></i> <span>MENU</span></a></li>
+                <li><a href="about-us" class="nav-link"><i class="fas fa-tag"></i> <span>ABOUT US</span></a></li>
+                <li><a href="contact" class="nav-link"><i class="far fa-address-book"></i> <span>CONTACT</span></a></li>
+            </ul>
+           
+        </nav>
+    </header>
+
+    <section class="carousel-section">
+        <div class="container-carousel">
+            <ul class="container-list">
+                <li class="container-elem current-elem">
+                    <h1 class="ad">HOT STUFF</h1>
+                    <p class="type">MEXICAN</p>
+                    <p class="food">BURGER</p>
+                    <img src="{%static 'images/burger.jpg'%}" alt="burger">
+                </li>
+                <li class="container-elem">
+                    <p class="ad2">NEW MENU</p>
+                    <p class="type2">PIZZA</p>
+                    <p class="food2">WITH CHICKEN</p>
+                    <img src="{%static 'images/pizza.jpg'%}" alt="pizza">
+                </li>
+                <li class="container-elem">
+                    <p class="ad3">━ From our chef ━</p>
+                    <p class="type3">MEET THE</p>
+                    <p class="type4">LEGEND</p>
+                    <p class="food3">CALIFORNIA TOASTS</p>
+                    <img src="{%static 'images/toast.jpg'%}" alt="toast">
+                </li>
+            </ul>
+            
+            <div class="prev"><i class="fas fa-arrow-left"></i></div>
+            <div class="next"><i class="fas fa-arrow-right"></i></div>
+        </div>
+    </section>
+    <section class="cards-section">
+        <div class="cards-container">
+            <div class="card">
+                <h3 class="card-title">For Vegans</h3>
+                <p class="card-content">Burger + French Fries + Drink</p>
+                <img src="{% static 'images/vegan.jpg'%}" alt="Vegan">
+            </div>
+            <div class="card">
+                <h3 class="card-title">Sale Menu</h3>
+                <p class="card-content">Only 11.99$</p>
+                <img src="{% static 'images/saleMenu.jpg'%}" alt="">
+            </div>
+            <div class="card">
+                <h3 class="card-title">Cake Special</h3>
+                <p class="card-content">Every Friday Only 0.99$ </p>
+                <img src="{% static 'images/cakeSpecial.jpg'%}" alt="">
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="container-footer">
+            <div class="footer-sec">
+                <div class="logo-footer">
+                    <img src="{% static 'images/logo.jpg' %}" alt="Logo">
+                </div>
+                <p>Address: 18014 2510 Renwick Drive, Pennsylvania PA</p>
+                <p>Email: <a href="mailto:anastasiu.tudor@gmail.com">  food&drinks@gmail.com </a> </p>
+            </div>
+            <div class="line"></div>
+            <div class="footer-sec">
+               <h2>Our Menu</h2>
+               <p>PIZZAS / BURGERS / TOASTS</p>
+               <p>SALADS / DRINKS / DESSERTS</p>
+            </div>
+            <div class="line"></div>
+            <div class="footer-sec">
+                <h2>NEWSLETTER</h2>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <input class="search-input" type="email" placeholder="Your email" name="subscription">
+                    <input class="submit" type="submit" value="SUBSCRIBE">
+                </form>
+             
+                
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/carrousel.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <title>Food&Drinks</title>
+</head>
+<body>
+    <header >
+        <nav>
+            <div class="open">
+                <i class="fas fa-bars"></i>
+            </div>
+           
+            <div class="logo">
+              <a href="/"><img src="{% static 'images/logo.jpg' %}" alt="logo"></a>  
+            </div>
+            <ul class="navigation-list">
+                <div class="close"><i class="fas fa-times"></i></div>
+                <li><a href="menu" class="nav-link"><i class="fas fa-hamburger"></i> <span>MENU</span></a></li>
+                <li><a href="about-us" class="nav-link"><i class="fas fa-tag"></i> <span>ABOUT US</span></a></li>
+                <li><a href="contact" class="nav-link"><i class="far fa-address-book"></i> <span>CONTACT</span></a></li>
+            </ul>
+           
+        </nav>
+    </header>
+    <section class="about-section">
+        <div class="about-head">
+            <h2>About Us</h2>
+            <img src="{% static 'images/aboutUs.jpg' %}" alt="">
+        </div>
+        <div class="container-about">
+            <h1>Our Story</h1>
+            <div class="about-row">
+                <div class="time">2012</div>
+                <div class="content">
+                    <div class="text">
+                        <h4>Idea</h4>
+                        <p>We wanted to create a restaurant that would offer its customers their favorite food. </p>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="image">
+                        <img src="{% static 'images/about1.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="about-row">
+                <div class="time">2014</div>
+                <div class="content">
+                    <div class="image">
+                        <img src="{% static 'images/about2.jpg' %}" alt="">
+                    </div>
+                    <div class="bar"></div>
+                    <div class="text">
+                        <h4>Opening</h4>
+                        <p>After making necessary preparations, we were ready to open the business.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-row">
+                <div class="time">2021</div>
+                <div class="content">
+                    <div class="text">
+                        <h4>Today</h4>
+                        <p>We are devoted to our customers and to business of our life.</p>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="image">
+                        <img src="{% static 'images/about3.jpg' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="team-container">
+            <h1>Meet our team</h1>
+            <p>Food&Drinks team is what makes us out from other fast food restaurants.Everyone of us, is a part of a friendly family, who always welcome new members!</p>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="background"></div>
+                    <img src="{% static 'images/user1.jpg' %}" alt="">
+                    <div class="card-details">
+                        <div class="name">Michelle Lauren</div>
+                        <div class="job">Founder</div>
+                        <div class="social-icons">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram-square"></i>
+                            <i class="fab fa-twitter-square"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="background"></div>
+                    <img src="{% static 'images/user2.jpg' %}" alt="">
+                    <div class="card-details">
+                        <div class="name">John Mike</div>
+                        <div class="job">Head Chef</div>
+                        <div class="social-icons">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram-square"></i>
+                            <i class="fab fa-twitter-square"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="background"></div>
+                    <img src="{% static 'images/user3.jpg' %}" alt="">
+                    <div class="card-details">
+                        <div class="name">Walter Marie</div>
+                        <div class="job">Marketing Expert</div>
+                        <div class="social-icons">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-instagram-square"></i>
+                            <i class="fab fa-twitter-square"></i>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container-footer">
+            <div class="footer-sec">
+                <div class="logo-footer">
+                    <img src="{% static 'images/logo.jpg' %}" alt="Logo">
+                </div>
+                <p>Address: 18014 2510 Renwick Drive, Pennsylvania PA</p>
+                <p>Email: <a href="mailto:anastasiu.tudor@gmail.com">  food&drinks@gmail.com </a> </p>
+            </div>
+            <div class="line"></div>
+            <div class="footer-sec">
+               <h2>Our Menu</h2>
+               <p>PIZZAS / BURGERS / TOASTS</p>
+               <p>SALADS / DRINKS / DESSERTS</p>
+            </div>
+            <div class="line"></div>
+            <div class="footer-sec">
+                <h2>NEWSLETTER</h2>
+                <form action="/about" method="POST">
+                    {% csrf_token %}
+                    <input class="search-input" type="email" placeholder="Your email" name="subscription">
+                    <input class="submit" type="submit" value="SUBSCRIBE">
+                </form>
+             
+                
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

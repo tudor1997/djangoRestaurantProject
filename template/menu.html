@@ -1,0 +1,154 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
+
+    <title>Food&Drinks</title>
+</head>
+<body>
+    <header >
+        <nav>
+            <div class="open">
+                <i class="fas fa-bars"></i>
+            </div>
+           
+            <div class="logo">
+              <a href="/"><img src="{% static 'images/logo.jpg' %}" alt="logo"></a>  
+            </div>
+            <ul class="navigation-list">
+                <div class="close"><i class="fas fa-times"></i></div>
+                <li><a href="menu" class="nav-link"><i class="fas fa-hamburger"></i> <span>MENU</span></a></li>
+                <li><a href="about-us" class="nav-link"><i class="fas fa-tag"></i> <span>ABOUT US</span></a></li>
+                <li><a href="contact" class="nav-link"><i class="far fa-address-book"></i> <span>CONTACT</span></a></li>
+            </ul>
+           
+        </nav>
+    </header>
+    
+    <div id="menu-title">
+        <h1>MENU</h1>
+        <img src="{% static 'images/menuBg.jpg' %}" alt="Menu">
+    </div>
+    <section class="menu-section">
+
+        <div class="container-menu">
+            <div class="menu">
+             
+                <div class="menu-title">Burgers</div>
+                {% for burger in burgers %}
+                <div class="menu-elem">
+                    <div class="details">
+                        <div class="elem-name">{{ burger.name }}</div>
+                        <div class="elem-details">{{ burger.details }}</div>
+                    </div>
+                    <div class="elem-price"> {{ burger.price }}$</div>                
+                </div>
+                {% endfor %}
+                <img src="{% static 'images/burgers.jpg'%}" alt="">
+            </div>
+     
+            <div class="menu">
+                <div class="menu-title">Pizzas</div>
+                {% for pizza in pizzas %}
+                <div class="menu-elem">
+                    <div class="details">
+                        <div class="elem-name">{{pizza.name}}</div>
+                        <div class="elem-details">{{pizza.details}}</div>
+                    </div>
+                    <div class="elem-price">{{pizza.price}} $</div>                
+                </div>
+                {% endfor %}
+                <img src="{% static 'images/pizzas.jpg'%}" alt="">
+            </div>
+      
+            <div class="menu">
+                <div class="menu-title">Toasts</div>
+                {% for toast in toasts %}
+                <div class="menu-elem">
+                    <div class="details">
+                        <div class="elem-name">{{toast.name}}</div>
+                        <div class="elem-details">{{toast.details}}</div>
+                    </div>
+                    <div class="elem-price">{{toast.price}}$</div>                
+                </div>
+                {% endfor %}
+                <img src="{% static 'images/toasts.jpg'%}" alt="">
+            </div>
+     
+            <div class="menu">
+                <div class="menu-title">Desserts</div>
+                {% for desert in desserts %}
+                <div class="menu-elem">
+                    <div class="details">
+                        <div class="elem-name">{{desert.name}}</div>
+                        <div class="elem-details">{{desert.details}}</div>
+                    </div>
+                    <div class="elem-price">{{desert.price}}$</div>                
+                </div>
+                {% endfor %}
+                <img src="{% static 'images/desserts.jpg'%}" alt="">
+            </div>
+    
+            <div class="menu">
+                <div class="menu-title">Drinks</div>
+                {% for drink in drinks %}
+                <div class="menu-elem">
+                    <div class="details">
+                        <div class="elem-name">{{drink.name}}</div>
+                        <div class="elem-details">{{drink.details}}</div>
+                    </div>
+                    <div class="elem-price"> {{drink.price}}$</div>                
+                </div>
+                {% endfor %}
+                <img src="{% static 'images/coffees.jpg'%}" alt="">
+            </div>
+          
+
+
+
+        </div>
+    </section>
+    <footer>
+        <div class="container-footer">
+            <div class="footer-sec">
+                <div class="logo-footer">
+                    <img src="{% static 'images/logo.jpg' %}" alt="Logo">
+                </div>
+                <p>Address: 18014 2510 Renwick Drive, Pennsylvania PA</p>
+                <p>Email: <a href="mailto:anastasiu.tudor@gmail.com">  food&drinks@gmail.com </a> </p>
+            </div>
+            <div class="line"></div>
+            <div class="footer-sec">
+               <h2>Our Menu</h2>
+               <p>PIZZAS / BURGERS / TOASTS</p>
+               <p>SALADS / DRINKS / DESSERTS</p>
+            </div>
+            <div class="line"></div>
+            <div class="footer-sec">
+                <h2>NEWSLETTER</h2>
+                <form action="/menu" method="POST">
+                    {% csrf_token %}
+                    <input class="search-input" type="email" placeholder="Your email" name="subscription">
+                    <input class="submit" type="submit" value="SUBSCRIBE">
+                </form>
+             
+                
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+<script src="{% static 'script.js' %}"></script>
+</body>
+</html>

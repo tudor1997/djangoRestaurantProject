@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;900&display=swap');
+.about-section{
+    font-family: 'Gemunu Libre', sans-serif;
+    display:flex;
+    flex-direction:column;
+    
+}
+
+.about-head{
+    position: relative;
+    width: 100%;
+    height:300px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.about-head::before{
+    content: "";
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:#0000009c;
+    z-index:10;
+}
+.about-head img{
+    position: absolute;
+    top: 0;
+    left:0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.about-head h2{
+    z-index:20;
+    color:white;
+    text-shadow:1px 1px 1px #000;
+    font-size:50px;
+    font-weight: 700;
+    font-family:'Gemunu Libre',sans-serif;
+}
+.container-about{
+    display:flex;
+    flex-direction:column;
+}
+.container-about{
+    display:flex;
+    flex-direction:column;
+    
+}
+.container-about h1{
+    font-weight: 700;
+   margin:20px auto;
+    align-self:center;
+    justify-self:center;
+}
+.about-row{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    height:360px;
+    margin:30px auto;
+}
+.time{
+    width:100%;
+    text-align: center;
+    font-size:30px;
+    font-weight: 600;
+}
+.content{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    justify-content:space-around;
+}
+.text{
+    width:50%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+.text h4{
+    font-weight: 600;
+    font-size:26px;
+}
+.text p {
+    font-size:20px;
+}
+.image{
+    width: 50%;
+    height: 100%;
+}
+.image img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.bar{
+    width:2px;
+    height:100%;
+    background-color:rgba(94, 88, 88, 0.637);
+}
+
+.team-container{
+    display:flex;
+    flex-direction: column;
+    margin:100px 0;
+}
+.team-container h1, .team-container p{
+    align-self: center;
+    justify-self:center;
+}
+.team-container p{
+    font-size:22px;
+}
+.cards-container{
+    display:flex;
+    justify-content:space-evenly;
+    margin:30px;
+}
+.card {
+    width:350px;
+    height:350px;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+}
+.background{
+    width:90%;
+    position:absolute;
+    height:105%;
+    background-color:skyblue;
+    top:-2%;
+    transition:width .3s, box-shadow .3s, border-radius .3s;
+}
+.card:hover .background{
+    width:105%;
+    box-shadow: 1px 1px 10px #000;
+    border-radius:10px;
+}
+.card img{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.card-details{
+    height:33%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: column;
+    text-align: center;
+    z-index:10;
+    background-color:rgba(0, 0, 0, 0.425);
+    transition:height 0.3s;
+}
+
+.card:hover .card-details{
+    height:40%;
+}
+.card:hover .card-details .social-icons{
+    opacity:1;
+}
+.name, .job{
+    z-index:20;
+    width:100%;
+    color:white;
+}
+.name{
+    font-size:25px;
+    font-weight: 700;
+}
+.job{
+    font-size:22px;
+    margin:0 auto;
+    font-weight: 600;
+}
+.social-icons{
+    z-index:20;
+    display:flex;
+    opacity: 0;
+    transition:opacity .3s;
+}
+.social-icons i{
+    margin: 10px 5px;
+    color:white;
+    cursor:pointer;
+font-size:30px;
+}
+
+
+@media(max-width:480px){
+    .about-head{
+        height:200px;
+
+    }
+    .about-head h2{
+        font-size:40px;
+    }
+    .content{
+        flex-direction:column;
+        margin:20px auto;
+        justify-content:center;
+        align-items:center;
+    }
+    .bar{
+        display:none;
+    }
+    .text, .image{
+        width:100%;
+    }
+    .text{
+        margin:10px 5px;
+        text-align: center;
+    }
+    .text h4{
+        font-size:22px;
+    }
+    .text p{
+        font-size:16px;
+    }
+
+
+    .team-container h1{
+        font-size:22px;
+    }
+    .team-container p{
+        font-size:16px;
+    }
+    .cards-container{
+        flex-direction:column;
+        justify-content:center;
+        width: 100%;
+    }
+    .card{
+        width:80%;
+        height:250px;
+        margin:10px 0;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .job{
+        font-size: 16px;
+    }
+    .social-icons i{
+        font-size:18px;
+    }
+}
+
+@media (max-width: 768px){
+    .about-section{
+        width: 100%;
+        overflow:hidden;
+    }
+    .container-about{
+        width: 100%;
+    }
+   .about-row{
+       margin:40px auto;
+   }
+    .content{
+        flex-direction:column;
+        margin:20px auto;
+        justify-content:center;
+        align-items:center;
+    }
+    .team-container{
+        width:100%;
+        margin:10px auto;
+        justify-content:center;
+        align-items:center;
+    }
+    .cards-container{
+        flex-direction:column;
+        align-items: center;
+        justify-content:center;
+        width: 100%;
+    }
+    .card{
+        width:80%;
+        height:400px;
+        margin:10px auto;
+    }
+}
+
+@media (max-height:1366px){
+    .about-section{
+        width: 100%;
+        overflow:hidden;
+    }
+    .bar {
+        display:none;
+    }
+    .content{
+        justify-content:space-between;
+        text-align: center;
+    }
+    .cards-container{
+        flex-wrap:wrap;
+        flex-direction:row;
+        justify-content:space-evenly;
+        align-items:center;
+        width: 100%;
+        margin:10px 0;
+    }
+    .card{
+        margin:20px 0;
+    }
+}
+

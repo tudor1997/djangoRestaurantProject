@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;900&display=swap');
+/* Start of section 1 */
+.carousel-section{
+    width: 100%;
+    height: 120vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-carousel{
+    width: 100%;
+    height:100%;
+    margin:0 auto;
+    display:flex;
+    position:relative;
+    align-items: center;
+    
+
+}
+.container-list{
+    list-style-type: none;
+    padding:0;
+    margin:0px;
+    position:relative;
+    height:100%;
+    width:100%;
+    transition:transform 250ms ease;
+}
+.current-elem .ad {
+    position:absolute;
+    font-family: "Gemunu Libre",sans-serif;
+    font-weight: 600;
+    top:44%;
+    left:16%;
+    color:white;
+    padding:10px;
+    border-radius: 4px;
+    background-color:rgba(209, 25, 25, 0.932);
+    animation:elemOpacity  4s ease-in-out;
+}
+
+.container-list p{
+    position:absolute;
+    font-family: "Gemunu Libre",sans-serif;
+ 
+    
+}
+.current-elem .type {
+    top: 51%;
+    left: 13%;
+    font-size: 72px;
+    color:white;
+    animation:elemOpacity1 5s ease-in-out;
+    font-weight: 600;
+}
+.current-elem .food {
+    top: 63%;
+    left: 18%;
+    font-size: 45px;
+    color:gold;
+    animation:elemOpacity2 4s ease-in-out ;
+    font-weight: 600;
+}
+@keyframes elemOpacity{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    75%{
+        opacity:1
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes elemOpacity1{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    75%{
+        opacity:1
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes elemOpacity2{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity:0;
+    }
+    50%{
+        opacity:0;
+    }
+    75%{
+        opacity:1
+    }
+    100%{
+        opacity:1;
+    }
+}
+.container-elem{
+    width:100%;
+    height: 778px;
+    padding:15px;
+    position:absolute;
+    top:0;
+    bottom:0;
+    
+   
+}
+.container-elem img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius:5px;
+}
+.prev{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 42%;
+    left: 5%;
+    z-index: 20;
+    transform: translateY(-50%);
+   
+}
+
+.prev i {
+    cursor: pointer;
+    font-size:60px;
+    transition:color .3s;
+}
+
+.next{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 42%;
+    right:5%;
+    z-index:20;
+    transform: translateY(-50%);
+    
+    transition:background-color .3s;
+}
+
+.next i {
+    cursor: pointer;
+    font-size:60px;
+    transition:color .3s;
+}
+.next i:hover, .prev i:hover {
+    color:silver;
+}
+
+.current-elem .ad2{
+    position:absolute;
+    background-color:rgba(209, 25, 25, 0.932);
+    top: 40%;
+    right: 24%;
+    padding:10px;
+    color:#fff;
+    font-size:40px;
+    border-radius:3px;
+    font-family:"Gemunu Libre",sans-serif;
+    animation: ad2 2s ease-in-out;
+}
+.current-elem .type2{
+    font-family:"Gemunu Libre",sans-serif;
+    position:absolute;
+    font-weight: 700;
+    top: 38%;
+    right: 11%;
+    color: #fff;
+    font-size: 70px;
+    animation: type2 3s ease-in-out;
+}
+.current-elem .food2{
+    font-family:"Gemunu Libre",sans-serif;
+    position:absolute;
+    font-weight: 700;
+    top: 50%;
+    right: 14%;
+    color:orangered;
+    font-size: 45px;
+    animation: food2 3s ease-in-out;
+}
+
+@keyframes ad2{
+    0%{
+        right:30%;
+        opacity:0.2;
+    }
+    100%{
+        right:24%;
+        opacity:1;
+    }
+}
+@keyframes type2{
+    0%{
+        right:4%;
+        opacity:0.2;
+    }
+    100%{
+        right:11%;
+        opacity:1;
+    }
+}
+@keyframes food2 {
+    0%{
+        top:57%;
+        opacity:0.2;
+    }
+    100%{
+        top:50%;
+        opacity:1;
+    }
+}
+.current-elem .ad3{
+    position:absolute;
+    top: 61%;
+    left: 10%;
+    color: black;
+    font-size: 41px;
+    font-weight: 700;
+    animation: ad3 .6s  ease-in-out;
+}
+.current-elem .type3{
+    position:absolute;
+    top: 67%;
+    left: 16%;
+    font-size: 44px;
+    font-weight: 600;
+    color: black;
+    animation: type3 .7s  ease-in-out;
+}
+.current-elem .type4{
+    position:absolute;
+    top: 72%;
+    left: 16%;
+    font-size: 54px;
+    color:white;
+    animation: type4 .8s  ease-in-out;
+}
+.current-elem .food3{
+    position:absolute;
+    top: 79%;
+    left: 11%;
+    font-size: 40px;
+    font-weight:700;
+    color: gold;
+    animation: food3 .9s  ease-in-out;
+}
+@keyframes ad3{
+    0%{
+        top:67%;
+        opacity:0.2;
+    }
+    100%{
+        top:61%;
+        opacity:1;
+    }
+}
+@keyframes type3{
+    0%{
+        top:74%;
+        opacity:0.2;
+    }
+    100%{
+        top:68%;
+        opacity:1;
+    }
+}
+@keyframes type4{
+    0%{
+        top:79%;
+        opacity:0.2;
+    }
+    100%{
+        top:72%;
+        opacity:1;
+    }
+}
+@keyframes food3{
+    0%{
+        top:86%;
+        opacity:0.2;
+    }
+    100%{
+        top:80%;
+        opacity:1;
+    }
+}
+
+/* End of Section 1 */
+
+/* Star of Section 2 */
+
+.cards-section{
+    width: 100%;
+    height: 500px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+.cards-container{
+    width: 100%;
+    height:300px;
+    background-color:white;
+    display:flex;
+    justify-content:space-between;
+   
+}
+.card{
+    width:360px;
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    position:relative;
+    font-family:'Roboto',sans-serif;
+    box-shadow:1px 1px 10px #000;
+    margin:0 auto;
+    transition: transform .5s ease-in-out, box-shadow 1s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow:1px 1px 10px rgb(40, 170, 221);
+}
+.card:hover .card-title, 
+.card:hover .card-content {
+    transform: scale(1.1);
+}
+.card-title, .card-content{
+    z-index:10;
+}
+.card-title{
+ font-size:43px;
+ color:white;
+ text-shadow:1px 1px 1px #000;
+ font-weight: 600;
+ transition:transform .5s ease-in;
+}
+.card-content{
+    font-size:25px;
+    color:white;
+    text-shadow:1px 1px 1px #000;
+    font-weight: 600;
+    transition:transform .5s ease-in;
+}
+.card img{
+    position:absolute;
+    object-fit:cover;
+    width:100%;
+    height:100%;
+   
+}
+
+/* End of Section 2 */
+
+@media( max-width:600px){
+  
+    .carousel-section{
+        height:110vh;
+    }
+    .current-elem .type{
+        font-size:48px;
+    }
+    .current-elem .food{
+        top:59%;
+        font-size:33px;
+    }
+    .current-elem .ad2{
+        top: 44%;
+        right: 29%;
+        font-size: 23px;
+    }
+    .current-elem .type2{
+        top: 42%;
+        right: 28%;
+        font-size: 58px;
+    }
+    .current-elem .food2{
+        font-size: 32px;
+        top: 51%;
+        right: 12%;
+    }
+    @keyframes ad2{
+        0%{
+            right:31%;
+            opacity:0.2;
+        }
+        100%{
+            right:29%;
+            opacity:1;
+        }
+    }
+    @keyframes type2{
+        0%{
+            right:24%;
+            opacity:0.2;
+        }
+        100%{
+            right:28%;
+            opacity:1;
+        }
+    }
+    @keyframes food2 {
+        0%{
+            top:50%;
+            opacity:0.2;
+        }
+        100%{
+            top:46%;
+            opacity:1;
+        }
+    }
+    .current-elem .ad3{
+        top: 55%;
+        left: 10%;
+        font-size: 34px;
+    }
+    .current-elem .type3{
+        top: 60%;
+    left: 27%;
+    font-size: 33px;
+    }
+    .current-elem .type4 {
+        top: 64%;
+    left: 25%;
+    font-size: 47px;
+    }
+    .current-elem .food3{
+        top: 71%;
+        left: 11%;
+        font-size: 33px;
+    }
+    @keyframes ad3{
+        0%{
+            top:61%;
+            opacity:0.2;
+        }
+        100%{
+            top:55%;
+            opacity:1;
+        }
+    }
+    @keyframes type3{
+        0%{
+            top:66%;
+            opacity:0.2;
+        }
+        100%{
+            top:60%;
+            opacity:1;
+        }
+    }
+    @keyframes type4{
+        0%{
+            top:72%;
+            opacity:0.2;
+        }
+        100%{
+            top:64%;
+            opacity:1;
+        }
+    }
+    @keyframes food3{
+        0%{
+            top:77%;
+            opacity:0.2;
+        }
+        100%{
+            top:71%;
+            opacity:1;
+        }
+    }
+
+    .cards-section{
+       
+        height:1000px;
+        width:100%;
+    }
+    .cards-container{
+        flex-direction: column;
+        height:100%;
+        width:100%;
+       
+        align-items:center;
+    }
+    .card{
+        width:80%;
+        margin:20px auto;
+        height:40%;
+    }
+    .card-title{
+        font-size:27px;
+    }
+    .card-content{
+        font-size:19px;
+    }
+}
+
+
+@media (max-width: 992px){
+    .cards-section {
+        height:1000px;
+    }
+    .cards-container{
+        width:100%;
+       flex-direction: column;
+        height:100%;
+        align-items:center;
+  
+    }
+    .card{
+        height:330px;
+        width:280px;
+        margin:20px auto;
+    }
+    .current-elem .type2{
+        right:5%;
+        font-size: 52px;
+        top:40%;
+    }
+    @keyframes type2{
+        0%{
+            right:2%;
+            opacity:0.2;
+        }
+        100%{
+            right:5%;
+            opacity:1;
+        }
+    }
+}
+@media(max-width:480px){
+    .current-elem .ad{
+        font-size: 29px;
+        top: 46%;
+    }
+    .current-elem .type{
+        font-size: 44px;
+        top: 52%;
+        left: 14%;
+    }
+    .current-elem .type2{
+        font-size: 36px;
+        top: 44%;
+    }
+    @keyframes food2 {
+        0%{
+            top:55%;
+            opacity:0.2;
+        }
+        100%{
+            top:51%;
+            opacity:1;
+        }
+    }
+    .prev{
+        left:8%;
+    }
+    .prev i {
+        cursor: pointer;
+        font-size: 45px;
+        transition: color .3s;
+    }
+    .next{
+        right:8%;
+    }
+    .next i {
+        cursor: pointer;
+        font-size: 45px;
+        transition: color .3s;
+    }
+}
+@media (max-width:280px) {
+    .current-elem .type2{
+        font-size: 34px;
+        top: 44%;
+        right: 16%;
+    }
+    .current-elem .ad2 {
+        top: 44%;
+        right: 46%;
+        font-size: 18px;
+    }
+    .current-elem .food2 {
+        font-size: 30px;
+        top: 50%;
+        right: 16%;
+    }
+
+    .card{
+        width:80%;
+    }
+    .card-title {
+        font-size: 22px;
+    }
+    .card-content {
+        font-size: 16px;
+    }
+}
+
+@media(min-height:1360px){
+    .carousel-section {
+        height: 60vh;
+    }
+    .cards-section{
+        height: 1000px;
+    }
+    .cards-container{
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card{
+        height:360px;
+        margin:0 20px;
+    }
+}
